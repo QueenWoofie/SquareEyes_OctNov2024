@@ -1,0 +1,41 @@
+/* Use this file to store your useful variables */
+/* This could be colors, fonts, or padding sizes! */
+
+:root {
+    --color-primary: #ffffff; /*text*/
+    --color-secondary: #0F1417; /*background*/
+    --color-nav: #03838F; /*footer + header*/
+    --color-menu: #24595e; /*sidebar/menu*/
+    --color-breadcrumb: #565656; /*breadcrumbs + box backgrounds*/
+    --color-breadcrumbactive: #ffffffbd;
+    --color-boxbackground: #565656;
+    --color-boxbackground2: rgba(255, 255, 255, 0.10);
+    --color-categorybtn: #24595e; /* #48ABB4 */
+    --color-categorybtnhover: #ff8000;
+    --color-movieoverlay: rgba(255, 128, 0, 0.80);
+    --color-detailcategory: #013b40;
+    --color-border: #9cf2fa;
+  
+    --color-btn: #027D88; /* #028e9b */ 
+    --color-btnextra: #06555c; /*icon backgrounds*/
+  
+    --color-texthover: #FF8000; /*text*/
+    
+    --boxshadow-hover: #00eaff21 0px 0px 20px 10px inset; /*logo*/
+    --color-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* PADDING */
+  
+    --height-header: 80px;
+    --main-padding: 10px 100px;
+    --height-breadcrumbs: 120px; /* TOP */
+
+  /* FONT SIZES */
+    --font-small: 0.8em;
+    --font-medium: 1em;
+    --font-large: 1.5em;
+
+    --font-h-small: 0.9em;
+    --font-h-medium: 1.1em;
+    --font-h-large: 1.6em;
+  }

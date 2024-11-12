@@ -15,6 +15,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="link-right">
+            <button>
+                <a href="movies.html" class="link">MOVIES</a>
+            </button>
+            <button>
+                <a href="about.html" class="link">ABOUT US</a>
+            </button>
+            <button>
+                <a href="contact.html" class="link">CONTACT</a>
+            </button>
+        </div>
+        <a class="logo" href="index.html">
+            <img src="assets/images/squareeyes-logo.png" alt="Square Eyes Logo">
+        </a>
+        <div id="cart">
+            <p class="icon cart"><span id="cart-count">0</p>
+            <div id="cart-list"></div>
+        </div>
+    </header>
     <main class="checkout">
         <h1>CHECKOUT</h1>
         <fieldset class="cart-content">
@@ -22,6 +42,82 @@
             <div id="checkout-list"></div>
             <script src="js/checkout.js"></script>
         </fieldset>
-    </main>  
+        <fieldset class="delivery-info">
+            <legend>Delivery Information</legend>
+            <form>
+                <div class="form-group">
+                    <label for="first-name" class="required">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name" class="required">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="required">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="required">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="required">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="required">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip" class="required">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="required">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+            </form>
+        </fieldset>
+        <fieldset class="payment-info">
+            <legend>Payment</legend>
+            <form class="payment-form">
+                <label class="pay-method">
+                    <input type="radio" name="payment" value="credit-card" checked>
+                    <span>Credit Card</span>
+                </label>
+                <label class="pay-method">
+                    <input type="radio" name="payment" value="klarna" checked>
+                    <span>Klarna</span>
+                </label>
+                <label class="pay-method">
+                    <input type="radio" name="payment" value="paypal" checked>
+                    <span>Paypal</span>
+                </label>
+                <label class="pay-method">
+                    <input type="radio" name="payment" value="Vipps" checked>
+                    <span>Vipps</span>
+                </label>
+                <div class="card-details">
+                    <div class="form-group">
+                        <label for="card-number" class="required">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date" class="required">Expiry Date</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM / YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv" class="required">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="XXX" required>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+        <a href="confirm.html" class="checkout-btn">COMPLETE PURCHASE</a>
+    </main>
+    <footer>
+        <p class="credits">@2024 Thea</p>
+    </footer>
 </body>
 </html>

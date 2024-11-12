@@ -113,6 +113,12 @@ body {
     margin-right: 8px;
 }
 
+  .trash::before {
+    font: var(--fa-font-solid);
+    content: '\f1f8';
+    margin-left: 8px;
+  }
+
   /* Hero */
 
   .hero {
@@ -164,6 +170,82 @@ body {
     background-color: var(--color-btnextra);
     color: var(--color-texthover);
     font-size: var(--font-h-medium);
+  }
+
+  /* Checkout Fieldsets */
+
+  .required::after {
+    content: '*';
+    margin-left: 5px;
+    color: var(--color-categorybtnhover);
+  }
+
+  .form-group {
+    display: flex;
+    flex: 100%;
+    flex-direction: column;
+    min-width: 100px;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"], input[type="checkbox"], input[type="radio"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+  .delivery-info {
+    flex: 45%;
+    height: fit-content;
+    min-height: 320px;
+  }
+
+  .payment-info {
+    flex: 40%;
+    height: fit-content;
+    min-height: 220px;
+  }
+
+  .payment-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pay-method {
+    flex: 22px;
+    text-align: center;
+  }
+
+  .card-details {
+    display: flex;
+    flex: 100%;
+    gap: 10px;
+    width: fit-content;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .checkout-btn {
+    flex: 100%;
+    background-color: var(--color-nav);
+    color: var(--color-primary);
+    border: none;
+    padding: 20px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-self: center;
+    text-align: center;
   }
 
   /* Smoother Page Loading */ 

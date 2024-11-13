@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = await response.json();
-            console.log('API Response:', data);
 
             let product;
             if (Array.isArray(data.data)) {

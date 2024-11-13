@@ -319,5 +319,6 @@ body {
     header {
         height: fit-content;
         justify-content: flex-start;
+        flex-direction: row;
     }
   }

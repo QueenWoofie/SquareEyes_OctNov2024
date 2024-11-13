@@ -472,6 +472,10 @@ fieldset p {
     #cart {
         margin-top: 10px;
     }
+
+    .product-card {
+        height: fit-content;
+    }
   }
 
   @media (max-width: 480px) {

@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading');
     const errorMessage = document.getElementById('error-message');
     const productContents = document.getElementById('product-contents');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let products = [];
-    const addToCartSound = new Audio('../assets/audio/add-to-cart.mp3');
 
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const response = await fetch(`${apiUrl}/${productId}`);
-
             if (!response.ok) {
                 throw new Error('Failed to fetch product details. Please try again later.');
             }
@@ -81,45 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        document.querySelector('.add-to-cart-large').addEventListener('click', addToCart);
-    }
-
-    function addToCart(event) {
-        const productId = event.target.getAttribute('data-id');
-        const product = products.find(p => p.id === productId);
-    
-        if (product) {
-            cart.push(product);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            addToCartSound.play();
-            updateCartDisplay();
-        }
-    }
-    
-    function updateCartDisplay() {
-        const cartList = document.getElementById('cart-list');
-        const cartCount = document.getElementById('cart-count');
-        cartList.innerHTML = '';
-
-        cart.forEach(item => {
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
-
-            cartItem.innerHTML = `
-                <p>${item.title}</p>
-                <p>Price: ${item.price}</p>
-            `;
-            cartList.appendChild(cartItem);
+        document.querySelector('.add-to-cart-large').addEventListener('click', (event) => {
+            const productId = event.target.getAttribute('data-id');
+            addToCart(productId, products);
         });
-
-        cartCount.textContent = cart.length;
     }
-
-    document.getElementById('cart').addEventListener('click', () => {
-        localStorage.setItem('cart', JSON.stringify(cart));
-        window.location.href = 'checkout.html';
-    });
 
     fetchProductDetails();
-    updateCartDisplay();
 });

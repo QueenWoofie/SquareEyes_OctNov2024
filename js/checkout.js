@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const checkoutList = document.getElementById('checkout-list');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const removeFromCartSound = new Audio('../assets/audio/remove-from-cart.mp3');
 
     let totalPrice = 0;
 
@@ -10,23 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
         checkoutItem.classList.add('checkout-item');
 
         checkoutItem.innerHTML = `
-                <div class="incart-item">
-                    <div class="product">
-                        <img src="${item.image.url}" alt="${item.image.alt || 'Product Image'}">
-                        <div class="details">
-                            <h2>${item.title}</h2>
-                            <p>${item.genre}</p>
-                            <p>${item.released}</p>
-                        </div>
-                    </div>
-                    <div class="plot">
-                        <p>${item.description}</p>
-                    </div>
-                    <div class="price-section">
-                        <p>${item.price},-</p>
-                        <button class="delete-item trash icon" data-index="${index}"></button>
+            <div class="incart-item">
+                <div class="product">
+                    <img src="${item.image.url}" alt="${item.image.alt || 'Product Image'}">
+                    <div class="details">
+                        <h2>${item.title}</h2>
+                        <p>${item.genre}</p>
+                        <p>${item.released}</p>
                     </div>
                 </div>
+                <div class="plot">
+                    <p>${item.description}</p>
+                </div>
+                <div class="price-section">
+                    <p>${item.price.toFixed(2)},-</p>
+                    <button class="delete-item trash icon" data-index="${index}"></button>
+                </div>
+            </div>
         `;
 
         checkoutList.appendChild(checkoutItem);
@@ -45,16 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     checkoutList.appendChild(totalPriceSection);
 
     document.querySelectorAll('.delete-item').forEach(button => {
-        button.addEventListener('click', deleteItem);
+        button.addEventListener('click', (event) => {
+            const index = event.target.getAttribute('data-index');
+            removeFromCart(index);
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+        });
     });
-
-    function deleteItem(event) {
-        const index = event.target.getAttribute('data-index');
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        removeFromCartSound.play();
-        setTimeout (() => {
-            location.reload();
-         }, 1000);
-    }
 });

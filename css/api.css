@@ -452,6 +452,7 @@ fieldset p {
   @media (max-width: 750px) {    
     header, footer {
         padding: 5px 10px!important;
+        justify-content: flex-start;
     }
 
     header button {

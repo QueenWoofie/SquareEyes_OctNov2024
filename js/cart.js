@@ -1,6 +1,6 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const addToCartSound = new Audio('..SquareEyes_OctNov2024/assets/audio/add-to-cart.mp3');
-const removeFromCartSound = new Audio('..SquareEyes_OctNov2024/assets/audio/remove-from-cart.mp3');
+const addToCartSound = new Audio('https://queenwoofie.github.io/SquareEyes_OctNov2024/assets/audio/add-to-cart.mp3');
+const removeFromCartSound = new Audio('https://queenwoofie.github.io/SquareEyes_OctNov2024/assets/audio/remove-from-cart.mp3');
 
 function addToCart(productId, products) {
     const product = products.find(p => p.id === productId);

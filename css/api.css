@@ -449,15 +449,7 @@ fieldset p {
     }
   }
 
-  @media (max-width: 750px) {    
-    header, footer {
-        padding: 5px 10px!important;
-        justify-content: flex-start;
-    }
-
-    header button {
-        padding: 10px 5px!important;
-    }
+  @media (max-width: 750px) {
 
     #product-list {
         grid-template-columns: 1fr;
@@ -479,7 +471,6 @@ fieldset p {
   }
 
   @media (max-width: 480px) {
-    header {height: fit-content!important;}
 
     .link-right {
         flex-direction: column!important;

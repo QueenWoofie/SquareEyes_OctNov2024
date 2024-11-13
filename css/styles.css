@@ -304,3 +304,20 @@ body {
   .page-transition.fade-out {
     opacity: 0;
   }
+
+  @media (max-width: 750px) {    
+    header, footer {
+        padding: 5px 10px;
+    }
+
+    header button {
+        padding: 10px 5px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+        height: fit-content;
+        justify-content: flex-start;
+    }
+  }

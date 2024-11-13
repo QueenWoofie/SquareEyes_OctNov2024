@@ -468,6 +468,10 @@ fieldset p {
     .incart-item {
         grid-template-columns: 1fr;
     }
+
+    #cart {
+        margin-top: 10px;
+    }
   }
 
   @media (max-width: 480px) {

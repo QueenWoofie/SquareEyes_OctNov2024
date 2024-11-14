@@ -472,6 +472,9 @@ fieldset p {
 
     #cart {
         margin-top: 10px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
     }
 
     .product-card {

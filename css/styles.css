@@ -323,7 +323,6 @@ body {
   @media (max-width: 480px) {
     header {
         height: fit-content;
-        justify-content: flex-end;
-        flex-direction: column;
+        justify-content: center;
     }
   }

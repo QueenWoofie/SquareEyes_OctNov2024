@@ -76,6 +76,16 @@
     margin: 5px 0;
 }
 
+#genre-filter {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: var(--font-medium);
+    border-radius: 10px;
+    border: 1px solid var(--color-nav);
+    background-color: var(--color-btn);
+    color: var(--color-primary);
+}
+
 /* Cart */ 
 
   .add-to-cart {

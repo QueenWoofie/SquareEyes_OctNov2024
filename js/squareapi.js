@@ -70,4 +70,10 @@ function displayProducts(products) {
     setTimeout(() => productList.classList.add('visible'), 100);
 }
 
+document.getElementById('genre-filter').addEventListener('change', (event) => {
+    const selectedGenre = event.target.value;
+    const filteredProducts = selectedGenre ? products.filter(product => product.genre === selectedGenre) : products;
+    displayProducts(filteredProducts);
+});
+
 fetchProducts();

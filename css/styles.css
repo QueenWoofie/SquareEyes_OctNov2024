@@ -316,7 +316,7 @@ body {
 
     .logo img {
         width: fit-content;
-        height: var(--height-header);
+        max-height: var(--height-header);
     }
   }
 

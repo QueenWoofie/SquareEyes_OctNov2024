@@ -475,6 +475,8 @@ fieldset p {
         position: fixed;
         bottom: 20px;
         right: 20px;
+        background-color: var(--color-btn);
+        border-radius: 10px;
     }
 
     .product-card {

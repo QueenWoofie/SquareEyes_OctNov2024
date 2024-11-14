@@ -313,17 +313,6 @@ body {
     header button {
         padding: 10px 5px;
     }
-
-    .logo {
-        align-items: center;
-    }
-
-    .logo img {
-        max-width: 30vw;
-        width: fit-content;
-        height: fit-content;
-        max-height: var(--height-header);
-    }
   }
 
   @media (max-width: 480px) {

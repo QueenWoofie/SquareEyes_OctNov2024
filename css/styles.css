@@ -308,6 +308,7 @@ body {
   @media (max-width: 750px) {    
     header, footer {
         padding: 5px 10px;
+        justify-content: center;
     }
 
     header button {
@@ -317,7 +318,7 @@ body {
 
   @media (max-width: 480px) {
     header {
-        height: fit-content;
+        min-height: fit-content;
         justify-content: center;
     }
   }

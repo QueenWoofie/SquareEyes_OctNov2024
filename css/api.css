@@ -473,10 +473,11 @@ fieldset p {
     #cart {
         margin-top: 10px;
         position: fixed;
-        bottom: 20px;
+        top: 20px;
         right: 20px;
         background-color: var(--color-btn);
         border-radius: 10px;
+        padding: 5px;
     }
 
     .product-card {

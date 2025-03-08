@@ -260,6 +260,7 @@
 .product-details-text {
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
 .product-details-title {
@@ -457,6 +458,12 @@ fieldset p {
 
     #product-list > div > a > img {
         max-height: 40vw;
+    }
+
+    .product-details-text {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
     }
   }
 
